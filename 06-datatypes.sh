@@ -7,4 +7,4 @@ echo "please give the numbers :: "
 
 expr $1 + $2
 
-echo "the total value is :: expr $1 + $2"
+echo "the total value is :: 'expr $1 + $2'"
