@@ -2,12 +2,12 @@
 
 echo "please enter your User Name :: "
 
-read -i $1
+read  USERNAME
 
 echo "Please enter your password :: "
 
-read -i $2
+read PASSWORD
 
-echo "my user name is $1"
+echo "my user name is $USERNAME"
 
-echo "my password is $2"
+echo "my password is $PASSWORD"
