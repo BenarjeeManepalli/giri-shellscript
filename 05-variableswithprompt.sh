@@ -1,8 +1,8 @@
 #!/bin/bash
 
-read -i USERNAME
-
 echo "please enter your User Name :: "
+
+read -i USERNAME
 
 echo "Please enter your password :: "
 
