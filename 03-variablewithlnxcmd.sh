@@ -2,7 +2,7 @@
 
 D=$(date)
 L=$(ls -l)
-C=$(cat testfile)
+C=$(cat testfile.txt)
 
 echo "Today date is ${D}"  #$D is denotes my date is printing.
 
