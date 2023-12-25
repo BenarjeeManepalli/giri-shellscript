@@ -5,6 +5,12 @@ NUMBER2=$2
 
 echo "please give the numbers :: "
 
-expr $1 + $2
+VALUE= $(expr $1 + $2)
 
-echo "the total value is :: 'expr $1 + $2'"
+echo "the total value is :: ${VALUE}"
+
+echo "How many args passed:: $#"
+
+echo "All args passed:: $@"
+
+echo "Script name:: $0"
