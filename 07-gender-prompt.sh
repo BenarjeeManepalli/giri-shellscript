@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # User prompt
-echo  "Please type in your gender [M/F]: "
+echo  -n  "Please type in your gender [M/F]: "
 
 # Read the user input
 read gender
