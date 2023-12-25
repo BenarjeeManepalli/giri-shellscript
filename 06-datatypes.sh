@@ -5,7 +5,7 @@ NUMBER2=$2
 
 echo "please give the numbers :: "
 
-VALUE='expr $1 + $2'
+VALUE='expr $NUMBER1 + $NUMBER2'
 
 echo "the total value is :: ${VALUE}"
 
