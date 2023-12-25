@@ -8,6 +8,6 @@ echo "Please enter your password :: "
 
 read -i PASSWORD
 
-echo   "my user name is ${USERNAME}"
+echo   "my user name is $USERNAME}"
 
-echo    "my password is ${PASSWORD}"
+echo    "my password is $PASSWORD"
