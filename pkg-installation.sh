@@ -24,6 +24,7 @@ then
    echo "Installation SQL is Success"
 else
    echo "Installation SQL is failure"
+fi # ending the condition
 
 yum install  git -y  # installing the git package
 
@@ -33,6 +34,8 @@ then
 else
    echo "Installation Git is falure"
 
+fi #ending the condition
+
 yum install web -y # installing the web package
 
 if [ $? -eq 0]
@@ -40,4 +43,5 @@ then
    echo "Installation Web is Success"
 else
    echo "Installation Web is falure"
+fi # Ending the condition.
 
