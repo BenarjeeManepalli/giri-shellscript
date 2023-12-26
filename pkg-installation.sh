@@ -19,7 +19,7 @@ fi  # end of the condition
 
 yum install mysql -y # installing the sql package
 
-if [ $? -eq 0]
+if [ $? -eq 0 ]
 then 
    echo "Installation SQL is Success"
 else
@@ -28,7 +28,7 @@ fi # ending the condition
 
 yum install  git -y  # installing the git package
 
-if [ $? -eq 0]
+if [ $? -eq 0 ]
 then 
    echo "Installation Git is Success"
 else
@@ -38,7 +38,7 @@ fi #ending the condition
 
 yum install web -y # installing the web package
 
-if [ $? -eq 0]
+if [ $? -eq 0 ]
 then 
    echo "Installation Web is Success"
 else
