@@ -19,7 +19,7 @@ VALID(){
 
     if [ $1 -eq 0 ]
 then 
-   echo -e "$2 is $G Success $N"
+   echo -e "$G :: $2 is Success $N"
 else
    echo -e "$R ERROR :: $2 is failure $N"
 fi                   # ending the condition
@@ -28,7 +28,7 @@ fi                   # ending the condition
 if [ $ID -eq 0 ]
 then
 
-     echo -e "$G You are the root user please procced installation"
+     echo -e "$G You are the root user please procced installation $N"
 else
      echo -e "$R ERROR:: you are not root user $N"
 exit 1
