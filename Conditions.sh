@@ -7,7 +7,7 @@ echo "Please enter the values :: $X and $Y"
 if [ $X -le $Y ]
 {
     echo "the value is not equal to given thevalue"
-else
+  else
     echo "the value is equal to give value"
 }
 
