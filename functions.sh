@@ -6,22 +6,31 @@
 
 ID=$(id -u)
 
+TIMESTAMP=$(date +%F-%X)
+LOG="/tmp/$0-$TIMESTAMP.log"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+echo "My Script started at $TIMESTAMP" $>>$LOG
+
 VALID(){
 
     if [ $1 -eq 0 ]
 then 
-   echo "$2 is Success"
+   echo "$2 is $G Success $N"
 else
-   echo "ERROR :: $2 is failure"
+   echo "$R ERROR :: $2 is failure $N"
 fi                   # ending the condition
 }                    # FUNCTION IS END
 
 if [ $ID -eq 0 ]
 then
 
-     echo "You are the root user please procced installation"
+     echo "$G You are the root user please procced installation"
 else
-     echo "ERROR:: you are not root user"
+     echo "$R ERROR:: you are not root user $N"
 exit 1
 fi  # end of the condition
 
