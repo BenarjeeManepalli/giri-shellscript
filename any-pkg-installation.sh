@@ -36,8 +36,9 @@ do
     then
        yum install $PKG -y  &>>$LOG
 
-       VALID $? "Instalation of $PKG"
+       VALID $? "Installation of $PKG"
     else
       echo "$R the $PKG is already installed .... $Y Skipping $N"
+    fi
 done
 
