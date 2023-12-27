@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Installing the package using function.
+#!/bin/bash
+# Package (SQL & Git) installation
+
+ID=$(id -u)
+TIMESTAMP=$(date +%F-%X)
+LOG="/tmp/$0-$TIMESTAMP.log"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+VALID(){
+
+    if [ $1 -eq 0 ]
+then 
+   echo -e "$G :: $2 is Success $N"
+else
+   echo -e "$R ERROR :: $2 is failure $N"
+fi                   # ending the condition
+}                    # FUNCTION IS END
+
+
+echo "My Script started at $TIMESTAMP" $>>$LOG
+
+echo "Total Number of packages pased $#"
+
+echo "The given packages are $@"
+
+for PKG in $@  # PKG=sql or git or nodejs 
+do 
+  yum list installed $pkg &>>$LOG
+    if [$? -ne 0]
+    then
+       yum install $PKG -y  &>>$LOG
+
+       VALID $? "Instalation of $PKG"
+    else
+      echo "$R the $PKG is already installed .... $Y Skipping $N"
+done
+
