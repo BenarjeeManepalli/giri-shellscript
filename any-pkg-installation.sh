@@ -32,13 +32,13 @@ echo "The given packages are $@"
 for PKG in $@  # PKG=sql or git or nodejs 
 do 
   yum list installed $pkg &>>$LOG
-    if [$? -ne 0]
+    if [ $? -ne 0 ]
     then
        yum install $PKG -y  &>>$LOG
 
        VALID $? "Installation of $PKG"
     else
-      echo "$R the $PKG is already installed .... $Y Skipping $N"
+      echo -e "$R the $PKG is already installed .... $Y Skipping $N"
     fi
 done
 
