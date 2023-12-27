@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..1000}
+for giri in (1..100000)
 do
-    echo "$i"
+    echo "$giri"
 done
