@@ -6,5 +6,5 @@ echo "the increased numbers from 1 to 100"
 
 for i in ((i=1;i<=100;i++));
 do
-    echo "the value is $i"
+    echo $i
 done
