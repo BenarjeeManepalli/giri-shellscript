@@ -11,6 +11,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+P="\e[35m"
 
 VALID(){
 
@@ -25,9 +26,9 @@ fi                   # ending the condition
 
 echo "My Script started at $TIMESTAMP" $>>$LOG
 
-echo "Total Number of packages pased $#"
+echo -e "$P Total Number of packages pased $#"
 
-echo "The given packages are $@"
+echo "$P the given packages are $@"
 
 for PKG in $@  # PKG=sql or git or nodejs 
 do 
@@ -38,7 +39,7 @@ do
 
        VALID $? "Installation of $PKG"
     else
-      echo -e "$R the $PKG is already installed .... $Y Skipping $N"
+      echo -e "$P the $PKG is already installed .... $Y Skipping $N"
     fi
 done
 
