@@ -26,9 +26,9 @@ fi                   # ending the condition
 
 echo "My Script started at $TIMESTAMP" $>>$LOG
 
-echo -e "$P Total Number of packages pased $#"
+echo -e "$P Total Number of packages passed $#"
 
-echo "$P the given packages are $@"
+echo -e "$P the given packages are $@"
 
 for PKG in $@  # PKG=sql or git or nodejs 
 do 
